@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sharpcode", "extern\sharpco
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "primus-core", "src\primus-core\primus-core.csproj", "{D22F65A8-0B5E-4105-AB00-A659801F54D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "primus-forms", "src\primus-forms\primus-forms.csproj", "{B7D46D18-5DB0-48D1-87D8-32E0B971DB41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{D22F65A8-0B5E-4105-AB00-A659801F54D7}.Release|x64.Build.0 = Release|Any CPU
 		{D22F65A8-0B5E-4105-AB00-A659801F54D7}.Release|x86.ActiveCfg = Release|Any CPU
 		{D22F65A8-0B5E-4105-AB00-A659801F54D7}.Release|x86.Build.0 = Release|Any CPU
+		{B7D46D18-5DB0-48D1-87D8-32E0B971DB41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7D46D18-5DB0-48D1-87D8-32E0B971DB41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7D46D18-5DB0-48D1-87D8-32E0B971DB41}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B7D46D18-5DB0-48D1-87D8-32E0B971DB41}.Debug|x64.Build.0 = Debug|Any CPU
+		{B7D46D18-5DB0-48D1-87D8-32E0B971DB41}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B7D46D18-5DB0-48D1-87D8-32E0B971DB41}.Debug|x86.Build.0 = Debug|Any CPU
+		{B7D46D18-5DB0-48D1-87D8-32E0B971DB41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7D46D18-5DB0-48D1-87D8-32E0B971DB41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7D46D18-5DB0-48D1-87D8-32E0B971DB41}.Release|x64.ActiveCfg = Release|Any CPU
+		{B7D46D18-5DB0-48D1-87D8-32E0B971DB41}.Release|x64.Build.0 = Release|Any CPU
+		{B7D46D18-5DB0-48D1-87D8-32E0B971DB41}.Release|x86.ActiveCfg = Release|Any CPU
+		{B7D46D18-5DB0-48D1-87D8-32E0B971DB41}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
