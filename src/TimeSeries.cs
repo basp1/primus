@@ -66,6 +66,24 @@ namespace basp.primus
             }
         }
 
+        public double Median(Func<T, double> keyFunc)
+        {
+            if (Count == 0)
+            {
+                throw new IndexOutOfRangeException();
+            }
+            else if (Count % 2 == 0)
+            {
+                double a = keyFunc(items[Count / 2 + 1]);
+                double b = keyFunc(items[Count / 2]);
+                return (a + b) / 2.0;
+            }
+            else
+            {
+                return keyFunc(items[Count / 2]);
+            }
+        }
+
         static int LowerBound(IList<DateTime> array, DateTime date)
         {
             int n = array.Count - 1;
