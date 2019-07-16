@@ -1,0 +1,3 @@
+[submodule "extern/sharpcode"]
+	path = extern/sharpcode
+	url = https://github.com/basp1/sharpcode/
