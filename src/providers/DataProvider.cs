@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace basp.primus
+namespace basp.primus.providers
 {
     public interface DataProvider<T> : IDisposable
     {

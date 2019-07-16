@@ -6,9 +6,9 @@ using RestSharp;
 using System.Xml;
 using System.Globalization;
 
-namespace basp.primus
+namespace basp.primus.providers
 {
-    public class CentralBankProvider : DataProvider<Valute>
+    public class CentralBankProvider : DataProvider<double>
     {
         RestClient client;
         Currency currency;
@@ -23,7 +23,7 @@ namespace basp.primus
         {
         }
 
-        public TimeSeries<Valute> Request(DateTime from, DateTime to)
+        public TimeSeries<double> Request(DateTime from, DateTime to)
         {
             var request = new RestRequest("scripts/XML_dynamic.asp", Method.GET);
 
@@ -45,23 +45,22 @@ namespace basp.primus
             return ParseContent(content);
         }
 
-        private TimeSeries<Valute> ParseContent(string content)
+        private TimeSeries<double> ParseContent(string content)
         {
-            var series = new TimeSeries<Valute>();
+            var series = new TimeSeries<double>();
 
             var reader = new XmlTextReader(new System.IO.StringReader(content));
 
             while (reader.Read())
             {
-                Valute valute;
                 if (XmlNodeType.Element == reader.NodeType && "Record" == reader.LocalName)
                 {
-                    valute.Date = DateTime.ParseExact(reader.GetAttribute("Date"), "dd.MM.yyyy", CultureInfo.InvariantCulture);
+                    var date = DateTime.ParseExact(reader.GetAttribute("Date"), "dd.MM.yyyy", CultureInfo.InvariantCulture);
                     while (reader.Read() && "Value" != reader.LocalName) { }
                     reader.Read();
-                    valute.Value = Double.Parse(reader.Value);
+                    double value = Double.Parse(reader.Value);
 
-                    series.Add(valute);
+                    series.Add(date, value);
                 }
             }
 
