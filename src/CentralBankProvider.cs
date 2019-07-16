@@ -8,21 +8,22 @@ using System.Globalization;
 
 namespace basp.primus
 {
-    public class CentralBankProxy : IClientProxy
+    public class CentralBankProvider : DataProvider<Valute>
     {
         RestClient client;
+        Currency currency;
 
-        public CentralBankProxy()
+        public CentralBankProvider(Currency currency)
         {
             client = new RestClient("http://www.cbr.ru");
-
+            this.currency = currency;
         }
 
         public void Dispose()
         {
         }
 
-        public ValuteSeries Request(Currency currency, DateTime from, DateTime to)
+        public TimeSeries<Valute> Request(DateTime from, DateTime to)
         {
             var request = new RestRequest("scripts/XML_dynamic.asp", Method.GET);
 
@@ -44,9 +45,9 @@ namespace basp.primus
             return ParseContent(content);
         }
 
-        private ValuteSeries ParseContent(string content)
+        private TimeSeries<Valute> ParseContent(string content)
         {
-            var series = new ValuteSeries();
+            var series = new TimeSeries<Valute>();
 
             var reader = new XmlTextReader(new System.IO.StringReader(content));
 
