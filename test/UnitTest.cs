@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
-using basp.primus;
+using basp.primus.providers;
 
 namespace primus.test
 {
