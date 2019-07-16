@@ -6,7 +6,7 @@ using RestSharp;
 using System.Xml;
 using System.Globalization;
 
-namespace basp.primus.providers
+namespace basp.primus.core.providers
 {
     public class CentralBankProvider : DataProvider<double>
     {

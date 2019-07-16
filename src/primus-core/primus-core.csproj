@@ -4,10 +4,10 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Version>0.1.0</Version>
     <Authors>basp</Authors>
-    <RootNamespace>basp.primus</RootNamespace>
-    <PackageId>primus</PackageId>
-    <Product>primus</Product>
-    <AssemblyName>primus</AssemblyName>
+    <RootNamespace>basp.primus.core</RootNamespace>
+    <PackageId>primus.core</PackageId>
+    <Product>primus.core</Product>
+    <AssemblyName>primus.core</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,11 +17,10 @@
   <ItemGroup>
     <Folder Include="filters\" />
     <Folder Include="transformers\" />
-    <Folder Include="visualizers\" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\extern\sharpcode\src\sharpcode.csproj" />
+    <ProjectReference Include="..\..\extern\sharpcode\src\sharpcode.csproj" />
   </ItemGroup>
 
 </Project>

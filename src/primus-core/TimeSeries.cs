@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 
-namespace basp.primus
+namespace basp.primus.core
 {
     public class TimeSeries<T>
     {
