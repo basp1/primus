@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
@@ -25,7 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\primus-core\primus-core.csproj" />
+    <ProjectReference Include="..\src\primus.core\primus.core.csproj" />
+    <ProjectReference Include="..\src\primus.data\primus.data.csproj" />
   </ItemGroup>
 
 </Project>

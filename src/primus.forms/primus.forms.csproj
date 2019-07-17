@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B7D46D18-5DB0-48D1-87D8-32E0B971DB41}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>primus_forms</RootNamespace>
-    <AssemblyName>primus-forms</AssemblyName>
+    <RootNamespace>primus.forms</RootNamespace>
+    <AssemblyName>primus.forms</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -83,6 +83,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\primus.core\primus.core.csproj">
+      <Project>{98f3b851-dd0d-4406-966e-78885c2ee128}</Project>
+      <Name>primus.core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\primus.data\primus.data.csproj">
+      <Project>{b4f452c0-96fa-4b5a-aade-3e6243abf34a}</Project>
+      <Name>primus.data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -2,7 +2,8 @@
 using System;
 using System.Collections.Generic;
 
-using basp.primus.core.providers;
+using basp.primus.core;
+using basp.primus.data;
 
 namespace primus.test
 {

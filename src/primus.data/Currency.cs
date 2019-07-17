@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace basp.primus.core.providers
+namespace basp.primus.data
 {
     public enum Currency
     {

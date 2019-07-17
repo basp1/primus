@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
+using basp.primus.core;
 using RestSharp;
 using System.Xml;
 using System.Globalization;
 
-namespace basp.primus.core.providers
+namespace basp.primus.data
 {
     public class CentralBankProvider : DataProvider<double>
     {
